@@ -1,0 +1,25 @@
+2025-01-02 20:56:44,976 - INFO - [building_management_server.py:32] - Attempting to load JSON file: converted_source.json
+2025-01-02 20:56:44,977 - INFO - [building_management_server.py:37] - Successfully loaded JSON from converted_source.json
+2025-01-02 20:56:44,981 - INFO - [building_management_server.py:32] - Attempting to load JSON file: converted_source.json
+2025-01-02 20:56:44,982 - INFO - [building_management_server.py:37] - Successfully loaded JSON from converted_source.json
+2025-01-02 20:56:44,984 - INFO - [building_management_server.py:32] - Attempting to load JSON file: converted_source.json
+2025-01-02 20:56:44,985 - INFO - [building_management_server.py:37] - Successfully loaded JSON from converted_source.json
+2025-01-02 20:56:59,869 - INFO - [building_management_server.py:32] - Attempting to load JSON file: versions\renovation_data_2025-01-02_15-03-26.json
+2025-01-02 20:56:59,870 - INFO - [building_management_server.py:37] - Successfully loaded JSON from versions\renovation_data_2025-01-02_15-03-26.json
+2025-01-02 20:56:59,870 - INFO - [building_management_server.py:521] - Starting JSON structure validation
+2025-01-02 20:56:59,871 - DEBUG - [building_management_server.py:529] - Found required field: project_name
+2025-01-02 20:56:59,871 - DEBUG - [building_management_server.py:529] - Found required field: last_updated
+2025-01-02 20:56:59,871 - DEBUG - [building_management_server.py:529] - Found required field: status
+2025-01-02 20:56:59,871 - DEBUG - [building_management_server.py:529] - Found required field: rooms
+2025-01-02 20:56:59,871 - DEBUG - [building_management_server.py:537] - Validating room: guest_bathroom
+2025-01-02 20:56:59,872 - DEBUG - [building_management_server.py:537] - Validating room: kitchen
+2025-01-02 20:56:59,872 - DEBUG - [building_management_server.py:537] - Validating room: living_room
+2025-01-02 20:56:59,872 - DEBUG - [building_management_server.py:537] - Validating room: master_bedroom
+2025-01-02 20:56:59,872 - INFO - [building_management_server.py:549] - JSON structure validation completed successfully
+2025-01-02 20:56:59,872 - INFO - [building_management_server.py:58] - Attempting to save JSON file: converted_source.json
+2025-01-02 20:56:59,875 - ERROR - [building_management_server.py:73] - Error saving JSON to converted_source.json: [WinError 3] The system cannot find the path specified: ''
+Traceback (most recent call last):
+  File "C:\Users\denni\Documents\python_apartment_reno\building_management_server.py", line 65, in save_json_file
+    os.makedirs(os.path.dirname(filepath), exist_ok=True)
+  File "<frozen os>", line 225, in makedirs
+FileNotFoundError: [WinError 3] The system cannot find the path specified: ''

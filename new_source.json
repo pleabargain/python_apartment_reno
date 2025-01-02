@@ -1,0 +1,535 @@
+{
+  "project_name": "123 Main Street Apartment Renovation",
+  "last_updated": "2024-12-30",
+  "status": "planning",
+  "rooms": {
+    "guest_bathroom": {
+      "budget": {
+        "amount": 1018.99,
+        "notes": "Focus on essential updates, keeping existing layout",
+        "attachments": [
+          "guest_bath_inspiration.jpg",
+          "contractor_quote.pdf"
+        ]
+      },
+      "square_footage": {
+        "value": 40,
+        "cost": 0,
+        "notes": "No structural changes planned",
+        "vendor": "",
+        "attachments": [
+          "floor_plan.pdf"
+        ]
+      },
+      "lighting": {
+        "ceiling_fixtures": {
+          "items": [
+            "Hampton Bay 2-Light Brushed Nickel"
+          ],
+          "cost": 89.99,
+          "notes": "Install location above vanity",
+          "vendor": "Home Depot",
+          "attachments": [
+            "light_spec.pdf"
+          ]
+        },
+        "vanity_lights": {
+          "items": [],
+          "cost": 0,
+          "notes": "Using ceiling fixture only",
+          "vendor": "",
+          "attachments": []
+        },
+        "ambient_lighting": {
+          "items": [],
+          "cost": 0,
+          "notes": "",
+          "vendor": "",
+          "attachments": []
+        }
+      },
+      "painting": {
+        "walls": {
+          "color": "Benjamin Moore Pale Oak OC-20",
+          "finish": "Eggshell",
+          "paint_type": "bathroom_specific",
+          "cost": 145.0,
+          "notes": "2 gallons needed",
+          "vendor": "Benjamin Moore Store",
+          "attachments": [
+            "paint_swatch.jpg"
+          ]
+        },
+        "ceiling": {
+          "color": "Pure White",
+          "finish": "matte",
+          "cost": 45.0,
+          "notes": "1 gallon",
+          "vendor": "Benjamin Moore Store",
+          "attachments": []
+        }
+      },
+      "fixtures": {
+        "toilet": {
+          "type": "Two-piece",
+          "brand": "American Standard Cadet 3",
+          "water_efficient": true,
+          "cost": 289.0,
+          "notes": "WaterSense certified",
+          "vendor": "Home Depot",
+          "attachments": [
+            "toilet_specs.pdf"
+          ]
+        },
+        "sink": {
+          "type": "Pedestal",
+          "faucet": {
+            "model": "Moen Eva Chrome",
+            "cost": 300.0,
+            "currency": "AED",
+            "notes": "Includes installation kit"
+          },
+          "mounting": "Wall-mounted",
+          "cost": 0.0,
+          "notes": "Includes installation kit",
+          "vendor": "Lowes",
+          "attachments": [
+            "sink_manual.pdf"
+          ]
+        },
+        "shower": {
+          "type": "Standard alcove",
+          "doors": "Clear glass sliding",
+          "hardware": "Chrome finish",
+          "cost": 0,
+          "notes": "Reusing existing tub, updating doors and hardware only",
+          "vendor": "Glass & Mirror Co",
+          "attachments": [
+            "shower_door_quote.pdf"
+          ]
+        }
+      }
+    },
+    "kitchen": {
+      "budget": {
+        "amount": 4248.0,
+        "notes": "Priority on appliances and countertops",
+        "attachments": [
+          "kitchen_layout.pdf"
+        ]
+      },
+      "appliances": {
+        "dishwasher": {
+          "brand": "Whirlpool",
+          "type": "Built-in",
+          "energy_efficient": true,
+          "cost": 649.0,
+          "notes": "Energy Star certified",
+          "vendor": "Best Buy",
+          "attachments": [
+            "dishwasher_warranty.pdf"
+          ]
+        },
+        "refrigerator": {
+          "brand": "GE",
+          "type": "Top Freezer",
+          "water_dispenser": false,
+          "ice_maker": true,
+          "cost": 0.0,
+          "notes": "Standard depth, stainless steel",
+          "vendor": "Home Depot",
+          "attachments": [
+            "fridge_specs.pdf"
+          ]
+        },
+        "stove": {
+          "type": "gas",
+          "brand": "Samsung",
+          "features": [
+            "Self-cleaning",
+            "5 burners"
+          ],
+          "cost": 799.0,
+          "notes": "Includes delivery and basic installation",
+          "vendor": "Best Buy",
+          "attachments": [
+            "stove_manual.pdf"
+          ]
+        }
+      },
+      "countertops": {
+        "material": "Quartz",
+        "edge_style": "Eased",
+        "cost": 2800.0,
+        "vendor": "Stone World",
+        "notes": "35 square feet total",
+        "attachments": [
+          "counter_quote.pdf"
+        ]
+      }
+    },
+    "living_room": {
+      "budget": {
+        "amount": 904.0,
+        "notes": "Focus on flooring and paint",
+        "attachments": [
+          "living_room_plan.pdf"
+        ]
+      },
+      "plants": {
+        "indoor_plants": {
+          "items": [
+            "Fiddle Leaf Fig",
+            "Snake Plant",
+            "Pothos"
+          ],
+          "cost": 175.0,
+          "notes": "Low maintenance plants suitable for indoor lighting",
+          "vendor": "Local Garden Center",
+          "attachments": [
+            "plant_care_guide.pdf"
+          ]
+        },
+        "planters": {
+          "items": [
+            "Modern Ceramic Pot - Large",
+            "Hanging Planter - Medium",
+            "Standing Plant Stand"
+          ],
+          "cost": 120.0,
+          "vendor": "Home Goods",
+          "notes": "Includes drainage plates"
+        }
+      },
+      "furniture": {
+        "seating": {
+          "sofa": {
+            "type": "3-Seater",
+            "color": "Gray",
+            "material": "Performance Fabric",
+            "cost": 0.0,
+            "vendor": "West Elm",
+            "notes": "Stain resistant fabric",
+            "attachments": [
+              "sofa_warranty.pdf"
+            ]
+          },
+          "accent_chairs": {
+            "quantity": 2,
+            "style": "Mid-century Modern",
+            "color": "Navy Blue",
+            "cost": 450.0,
+            "vendor": "Article",
+            "notes": "Assembly required"
+          }
+        },
+        "tables": {
+          "coffee_table": {
+            "material": "Walnut",
+            "style": "Rectangle with Storage",
+            "cost": 0.0,
+            "vendor": "Crate & Barrel",
+            "notes": "Includes delivery"
+          },
+          "side_tables": {
+            "quantity": 2,
+            "material": "Metal and Glass",
+            "cost": 159.0,
+            "vendor": "Target",
+            "notes": "Nesting tables"
+          }
+        }
+      }
+    },
+    "master_bedroom": {
+      "budget": {
+        "amount": 803.99,
+        "notes": "New flooring and closet organization",
+        "attachments": [
+          "bedroom_layout.pdf"
+        ]
+      },
+      "painting": {
+        "walls": {
+          "color": "Sherwin Williams Agreeable Gray",
+          "finish": "Eggshell",
+          "paint_type": "low-VOC",
+          "cost": 165.0,
+          "notes": "2 gallons needed for complete coverage",
+          "vendor": "Sherwin Williams",
+          "attachments": [
+            "master_paint_swatch.jpg"
+          ]
+        },
+        "ceiling": {
+          "color": "Pure White",
+          "finish": "flat",
+          "cost": 55.0,
+          "notes": "1 gallon needed",
+          "vendor": "Sherwin Williams",
+          "attachments": []
+        }
+      },
+      "cabinet_organization": {
+        "shelving": {
+          "material": "Melamine",
+          "color": "White",
+          "dimensions": [
+            "24in x 12in",
+            "36in x 12in",
+            "48in x 12in"
+          ],
+          "quantity": 6,
+          "cost": 245.0,
+          "notes": "Custom cut shelves with edge banding",
+          "vendor": "Local Cabinet Shop",
+          "attachments": [
+            "shelf_layout.pdf"
+          ]
+        }
+      },
+      "lighting": {
+        "ceiling_fixture": {
+          "items": [
+            "Modern Semi-Flush Mount Light"
+          ],
+          "cost": 179.99,
+          "notes": "Dimmable LED compatible",
+          "vendor": "Wayfair",
+          "attachments": [
+            "ceiling_light_specs.pdf"
+          ]
+        },
+        "bedside_lamps": {
+          "items": [
+            "Adjustable Wall Sconces - Set of 2"
+          ],
+          "cost": 159.0,
+          "notes": "Includes installation hardware",
+          "vendor": "Pottery Barn",
+          "attachments": [
+            "sconce_manual.pdf"
+          ]
+        }
+      }
+    }
+  },
+  "general_considerations": {
+    "building_management": {
+      "property_manager": {
+        "name": "John Smith",
+        "phone": "212-555-0123",
+        "email": "jsmith@buildingmanagement.com",
+        "office_hours": "Mon-Fri 9AM-5PM",
+        "emergency_contact": "212-555-0911"
+      },
+      "renovation_rules": {
+        "working_hours": "9AM-4PM Mon-Fri",
+        "elevator_usage": "Service elevator only, must be scheduled",
+        "debris_removal": "Contractor responsible, must use building dumpster",
+        "noise_restrictions": "No work on weekends",
+        "insurance_requirements": "Minimum $1M liability coverage",
+        "attachments": [
+          "building_rules.pdf"
+        ]
+      }
+    },
+    "contractor_information": {
+      "general_contractor": {
+        "name": "Mike Johnson",
+        "company": "MJ Renovations",
+        "license_number": "GC-2024-12345",
+        "insurance": "Liberty Mutual $2M coverage",
+        "contact": {
+          "phone": "212-555-9876",
+          "email": "mike@mjrenovations.com",
+          "address": "456 Contractor Lane, NYC"
+        },
+        "cost": 3500,
+        "notes": "Includes project management and debris removal",
+        "attachments": [
+          "contractor_agreement.pdf"
+        ]
+      },
+      "electricians": {
+        "electrician1": {
+          "name": "Sarah Wilson",
+          "company": "Wilson Electric",
+          "license_number": "EL-2024-789",
+          "insurance": "State Farm $1M coverage",
+          "contact": {
+            "phone": "212-555-4321",
+            "email": "sarah@wilsonelectric.com",
+            "address": "789 Electric Ave, NYC"
+          },
+          "pay_rate_by_hour": 95.0,
+          "notes": "Master electrician, specializes in residential rewiring",
+          "attachments": [
+            "electrician1_license.pdf"
+          ]
+        },
+        "electrician2": {
+          "name": "David Chen",
+          "company": "Bright Spark Electric",
+          "license_number": "EL-2024-456",
+          "insurance": "Progressive $1M coverage",
+          "contact": {
+            "phone": "212-555-8765",
+            "email": "dchen@brightsparkelectric.com",
+            "address": "321 Power Street, NYC"
+          },
+          "pay_rate_by_hour": 85.0,
+          "notes": "Available for emergency calls, experienced with smart home installations",
+          "attachments": [
+            "electrician2_credentials.pdf"
+          ]
+        }
+      },
+      "painters": {
+        "painter1": {
+          "name": "Tom Brown",
+          "company": "Premium Paint Pro",
+          "license_number": "PT-2024-111",
+          "insurance": "Nationwide $1M coverage",
+          "contact": {
+            "phone": "212-555-1234",
+            "email": "tom@premiumpaintpro.com",
+            "address": "567 Color Lane, NYC"
+          },
+          "pay_rate_by_hour": 65.0,
+          "notes": "Specializes in eco-friendly paints and custom finishes",
+          "attachments": [
+            "painter1_portfolio.pdf"
+          ]
+        },
+        "painter2": {
+          "contact": {
+            "phone": "",
+            "email": "",
+            "address": ""
+          },
+          "attachments": [],
+          "name": "maria's dad",
+          "company": "",
+          "license_number": "",
+          "insurance": "",
+          "notes": "",
+          "cost": 0.0
+        }
+      },
+      "plumbers": {
+        "plumber1": {
+          "name": "Maria Rodriguez",
+          "company": "Rodriguez Plumbing",
+          "license_number": "PL-2024-222",
+          "insurance": "Allstate $1M coverage",
+          "contact": {
+            "phone": "212-555-9999",
+            "email": "maria@rodriguezplumbing.com",
+            "address": "890 Water Way, NYC"
+          },
+          "pay_rate_by_hour": 110.0,
+          "notes": "Master plumber, 20 years experience",
+          "attachments": [
+            "plumber1_license.pdf"
+          ]
+        },
+        "plumber2": {
+          "name": "James Smith",
+          "company": "City Plumbing Solutions",
+          "license_number": "PL-2024-333",
+          "insurance": "Hartford $1M coverage",
+          "contact": {
+            "phone": "212-555-7777",
+            "email": "james@cityplumbing.com",
+            "address": "432 Pipe Street, NYC"
+          },
+          "pay_rate_by_hour": 95.0,
+          "notes": "Specialized in modern fixture installation",
+          "attachments": [
+            "plumber2_credentials.pdf"
+          ]
+        }
+      },
+      "cabinet_designers": {
+        "designer1": {
+          "name": "Lisa Park",
+          "company": "Custom Cabinet Design",
+          "license_number": "CD-2024-444",
+          "insurance": "Travelers $1M coverage",
+          "contact": {
+            "phone": "212-555-3333",
+            "email": "lisa@customcabinet.com",
+            "address": "123 Design Blvd, NYC"
+          },
+          "pay_rate_by_hour": 85.0,
+          "notes": "3D modeling and custom design specialist",
+          "attachments": [
+            "designer1_portfolio.pdf"
+          ]
+        }
+      },
+      "cabinet_installers": {
+        "installer1": {
+          "name": "Mike Thompson",
+          "company": "Expert Cabinet Installation",
+          "license_number": "CI-2024-555",
+          "insurance": "GEICO $1M coverage",
+          "contact": {
+            "phone": "212-555-2222",
+            "email": "mike@expertcabinet.com",
+            "address": "789 Install Ave, NYC"
+          },
+          "pay_rate_by_hour": 75.0,
+          "notes": "Certified installer for major cabinet brands",
+          "attachments": [
+            "installer1_certification.pdf"
+          ]
+        },
+        "installer2": {
+          "name": "Robert Lee",
+          "company": "Precision Cabinet Fitting",
+          "license_number": "CI-2024-666",
+          "insurance": "Farmers $1M coverage",
+          "contact": {
+            "phone": "212-555-4444",
+            "email": "robert@precisioncabinet.com",
+            "address": "567 Workshop Lane, NYC"
+          },
+          "pay_rate_by_hour": 70.0,
+          "notes": "Specializes in custom cabinet modifications and installations",
+          "attachments": [
+            "installer2_references.pdf"
+          ]
+        }
+      }
+    },
+    "timeline": {
+      "start_date": "2025-02-01",
+      "estimated_duration": "6 weeks",
+      "phase_breakdown": [
+        "Week 1-2: Kitchen demolition and appliance installation",
+        "Week 3-4: Bathroom renovations",
+        "Week 5-6: Flooring and painting"
+      ],
+      "notes": "Timeline dependent on material delivery dates",
+      "attachments": [
+        "project_timeline.pdf"
+      ]
+    },
+    "budget": {
+      "total": 6974.98,
+      "room_allocations": {
+        "kitchen": 8500,
+        "guest_bathroom": 3500,
+        "living_room": 2500,
+        "master_bedroom": 2000
+      },
+      "contingency": 3500,
+      "notes": "Contingency for unexpected issues",
+      "attachments": [
+        "budget_breakdown.xlsx"
+      ]
+    }
+  }
+}

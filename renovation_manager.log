@@ -1,0 +1,296 @@
+2024-12-30 14:47:00,881 - INFO - Starting Apartment Renovation Manager
+2024-12-30 14:47:00,881 - INFO - Loading JSON from source.json
+2024-12-30 14:47:00,881 - INFO - Successfully loaded JSON from source.json
+2024-12-30 14:47:00,882 - INFO - Displaying complete renovation cost breakdown
+2024-12-30 14:47:00,883 - INFO - Room guest_bathroom total: 1397.99 AED
+2024-12-30 14:47:00,884 - INFO - Room kitchen total: 5247.0 AED
+2024-12-30 14:47:00,886 - INFO - Room living_room total: 0 AED
+2024-12-30 14:47:00,886 - INFO - Room master_bedroom total: 0 AED
+2024-12-30 14:47:00,887 - INFO - Total project cost: 6644.99 AED
+2024-12-30 14:47:00,897 - INFO - Displaying room list
+2024-12-30 14:47:05,098 - INFO - Selected room: kitchen
+2024-12-30 14:47:05,098 - INFO - Starting edit session for room: kitchen
+2024-12-30 14:47:05,098 - INFO - Displaying costs for room: kitchen
+2024-12-30 14:47:05,099 - INFO - Room kitchen total cost: 5247.0 AED
+2024-12-30 14:47:13,330 - INFO - Updated refrigerator cost in room kitchen: 999.0 -> 0.0
+2024-12-30 14:47:16,460 - INFO - Exiting edit session for room: kitchen
+2024-12-30 14:47:16,461 - INFO - Displaying complete renovation cost breakdown
+2024-12-30 14:47:16,462 - INFO - Room guest_bathroom total: 1397.99 AED
+2024-12-30 14:47:16,463 - INFO - Room kitchen total: 4248.0 AED
+2024-12-30 14:47:16,463 - INFO - Room living_room total: 0 AED
+2024-12-30 14:47:16,464 - INFO - Room master_bedroom total: 0 AED
+2024-12-30 14:47:16,464 - INFO - Total project cost: 5645.99 AED
+2024-12-30 14:47:16,464 - INFO - Displaying room list
+2024-12-30 14:48:19,826 - INFO - Exiting application
+2024-12-30 14:48:23,994 - INFO - Starting Apartment Renovation Manager
+2024-12-30 14:48:23,994 - INFO - Loading JSON from source.json
+2024-12-30 14:48:23,995 - INFO - Successfully loaded JSON from source.json
+2024-12-30 14:48:23,995 - INFO - Displaying complete renovation cost breakdown
+2024-12-30 14:48:23,997 - INFO - Room guest_bathroom total: 1397.99 AED
+2024-12-30 14:48:23,998 - INFO - Room kitchen total: 5247.0 AED
+2024-12-30 14:48:23,998 - INFO - Room living_room total: 0 AED
+2024-12-30 14:48:23,999 - INFO - Room master_bedroom total: 0 AED
+2024-12-30 14:48:23,999 - INFO - Total project cost: 6644.99 AED
+2024-12-30 14:48:23,999 - INFO - Displaying room list
+2024-12-30 14:48:26,500 - INFO - Selected room: kitchen
+2024-12-30 14:48:26,500 - INFO - Starting edit session for room: kitchen
+2024-12-30 14:48:26,500 - INFO - Displaying costs for room: kitchen
+2024-12-30 14:48:26,501 - INFO - Room kitchen total cost: 5247.0 AED
+2024-12-30 14:48:26,501 - INFO - Updated budget amount for kitchen to 5247.0 AED
+2024-12-30 14:48:31,466 - INFO - Updated refrigerator cost in room kitchen: 999.0 -> 0.0
+2024-12-30 14:48:34,082 - INFO - Exiting edit session for room: kitchen
+2024-12-30 14:48:34,083 - INFO - Displaying complete renovation cost breakdown
+2024-12-30 14:48:34,084 - INFO - Room guest_bathroom total: 1397.99 AED
+2024-12-30 14:48:34,084 - INFO - Room kitchen total: 4248.0 AED
+2024-12-30 14:48:34,085 - INFO - Room living_room total: 0 AED
+2024-12-30 14:48:34,086 - INFO - Room master_bedroom total: 0 AED
+2024-12-30 14:48:34,086 - INFO - Total project cost: 5645.99 AED
+2024-12-30 14:48:34,086 - INFO - Displaying room list
+2024-12-30 14:48:39,690 - INFO - Selected room: living_room
+2024-12-30 14:48:39,690 - INFO - Starting edit session for room: living_room
+2024-12-30 14:48:39,690 - INFO - Displaying costs for room: living_room
+2024-12-30 14:48:39,691 - INFO - Room living_room total cost: 0 AED
+2024-12-30 14:48:39,691 - INFO - Updated budget amount for living_room to 0 AED
+2024-12-30 14:56:20,953 - INFO - Starting Apartment Renovation Manager
+2024-12-30 14:56:20,953 - INFO - Loading JSON from new_source.json
+2024-12-30 14:56:20,953 - INFO - Successfully loaded JSON from new_source.json
+2024-12-30 14:56:20,954 - INFO - Displaying complete renovation cost breakdown
+2024-12-30 14:56:20,958 - INFO - Room guest_bathroom total: 1397.99 AED
+2024-12-30 14:56:20,958 - INFO - Updated budget amount for guest_bathroom to 1397.99 AED
+2024-12-30 14:56:20,961 - INFO - Room kitchen total: 5247.0 AED
+2024-12-30 14:56:20,961 - INFO - Updated budget amount for kitchen to 5247.0 AED
+2024-12-30 14:56:20,966 - INFO - Room living_room total: 2102.0 AED
+2024-12-30 14:56:20,966 - INFO - Updated budget amount for living_room to 2102.0 AED
+2024-12-30 14:56:20,967 - INFO - Room master_bedroom total: 0 AED
+2024-12-30 14:56:20,967 - INFO - Updated budget amount for master_bedroom to 0 AED
+2024-12-30 14:56:20,968 - INFO - Total project cost: 8746.99 AED
+2024-12-30 14:56:20,968 - INFO - Updated total project budget to 8746.99 AED
+2024-12-30 14:56:20,968 - INFO - Displaying room list
+2024-12-30 14:56:46,259 - INFO - Selected room: kitchen
+2024-12-30 14:56:46,259 - INFO - Starting edit session for room: kitchen
+2024-12-30 14:56:46,259 - INFO - Displaying costs for room: kitchen
+2024-12-30 14:56:46,259 - INFO - Room kitchen total cost: 5247.0 AED
+2024-12-30 14:56:46,260 - INFO - Updated budget amount for kitchen to 5247.0 AED
+2024-12-30 14:57:10,170 - INFO - Updated refrigerator cost in room kitchen: 999.0 -> 0.0
+2024-12-30 14:57:10,170 - INFO - Displaying costs for room: kitchen
+2024-12-30 14:57:10,171 - INFO - Room kitchen total cost: 4248.0 AED
+2024-12-30 14:57:10,171 - INFO - Updated budget amount for kitchen to 4248.0 AED
+2024-12-30 14:57:23,648 - INFO - Exiting edit session for room: kitchen
+2024-12-30 14:57:23,649 - INFO - Displaying complete renovation cost breakdown
+2024-12-30 14:57:23,650 - INFO - Room guest_bathroom total: 1397.99 AED
+2024-12-30 14:57:23,650 - INFO - Updated budget amount for guest_bathroom to 1397.99 AED
+2024-12-30 14:57:23,651 - INFO - Room kitchen total: 4248.0 AED
+2024-12-30 14:57:23,651 - INFO - Updated budget amount for kitchen to 4248.0 AED
+2024-12-30 14:57:23,653 - INFO - Room living_room total: 2102.0 AED
+2024-12-30 14:57:23,653 - INFO - Updated budget amount for living_room to 2102.0 AED
+2024-12-30 14:57:23,653 - INFO - Room master_bedroom total: 0 AED
+2024-12-30 14:57:23,653 - INFO - Updated budget amount for master_bedroom to 0 AED
+2024-12-30 14:57:23,654 - INFO - Total project cost: 7747.99 AED
+2024-12-30 14:57:23,654 - INFO - Updated total project budget to 7747.99 AED
+2024-12-30 14:57:23,654 - INFO - Displaying room list
+2024-12-30 14:57:40,496 - INFO - Selected room: living_room
+2024-12-30 14:57:40,497 - INFO - Starting edit session for room: living_room
+2024-12-30 14:57:40,497 - INFO - Displaying costs for room: living_room
+2024-12-30 14:57:40,498 - INFO - Room living_room total cost: 2102.0 AED
+2024-12-30 14:57:40,498 - INFO - Updated budget amount for living_room to 2102.0 AED
+2024-12-30 14:57:45,442 - INFO - Updated coffee_table cost in room living_room: 299.0 -> 0.0
+2024-12-30 14:57:45,446 - INFO - Displaying costs for room: living_room
+2024-12-30 14:57:45,450 - INFO - Room living_room total cost: 1803.0 AED
+2024-12-30 14:57:45,450 - INFO - Updated budget amount for living_room to 1803.0 AED
+2024-12-30 14:58:08,474 - INFO - Updated sofa cost in room living_room: 899.0 -> 0.0
+2024-12-30 14:58:08,475 - INFO - Displaying costs for room: living_room
+2024-12-30 14:58:08,476 - INFO - Room living_room total cost: 904.0 AED
+2024-12-30 14:58:08,476 - INFO - Updated budget amount for living_room to 904.0 AED
+2024-12-30 14:58:15,666 - INFO - Exiting edit session for room: living_room
+2024-12-30 14:58:15,666 - INFO - Displaying complete renovation cost breakdown
+2024-12-30 14:58:15,668 - INFO - Room guest_bathroom total: 1397.99 AED
+2024-12-30 14:58:15,668 - INFO - Updated budget amount for guest_bathroom to 1397.99 AED
+2024-12-30 14:58:15,669 - INFO - Room kitchen total: 4248.0 AED
+2024-12-30 14:58:15,669 - INFO - Updated budget amount for kitchen to 4248.0 AED
+2024-12-30 14:58:15,670 - INFO - Room living_room total: 904.0 AED
+2024-12-30 14:58:15,670 - INFO - Updated budget amount for living_room to 904.0 AED
+2024-12-30 14:58:15,671 - INFO - Room master_bedroom total: 0 AED
+2024-12-30 14:58:15,671 - INFO - Updated budget amount for master_bedroom to 0 AED
+2024-12-30 14:58:15,671 - INFO - Total project cost: 6549.99 AED
+2024-12-30 14:58:15,671 - INFO - Updated total project budget to 6549.99 AED
+2024-12-30 14:58:15,671 - INFO - Displaying room list
+2024-12-30 14:58:23,651 - INFO - Selected room: master_bedroom
+2024-12-30 14:58:23,651 - INFO - Starting edit session for room: master_bedroom
+2024-12-30 14:58:23,651 - INFO - Displaying costs for room: master_bedroom
+2024-12-30 14:58:23,651 - INFO - Room master_bedroom total cost: 0 AED
+2024-12-30 14:58:23,652 - INFO - Updated budget amount for master_bedroom to 0 AED
+2024-12-30 14:58:28,944 - INFO - Exiting edit session for room: master_bedroom
+2024-12-30 14:58:28,945 - INFO - Displaying complete renovation cost breakdown
+2024-12-30 14:58:28,946 - INFO - Room guest_bathroom total: 1397.99 AED
+2024-12-30 14:58:28,946 - INFO - Updated budget amount for guest_bathroom to 1397.99 AED
+2024-12-30 14:58:28,947 - INFO - Room kitchen total: 4248.0 AED
+2024-12-30 14:58:28,947 - INFO - Updated budget amount for kitchen to 4248.0 AED
+2024-12-30 14:58:28,948 - INFO - Room living_room total: 904.0 AED
+2024-12-30 14:58:28,948 - INFO - Updated budget amount for living_room to 904.0 AED
+2024-12-30 14:58:28,949 - INFO - Room master_bedroom total: 0 AED
+2024-12-30 14:58:28,949 - INFO - Updated budget amount for master_bedroom to 0 AED
+2024-12-30 14:58:28,949 - INFO - Total project cost: 6549.99 AED
+2024-12-30 14:58:28,949 - INFO - Updated total project budget to 6549.99 AED
+2024-12-30 14:58:28,949 - INFO - Displaying room list
+2024-12-30 14:58:34,863 - INFO - Creating backup file: new_source_20241230_145834.json
+2024-12-30 14:58:34,865 - INFO - Updating new_source.json
+2024-12-30 14:58:34,867 - INFO - Successfully saved JSON files
+2024-12-30 14:58:34,867 - INFO - Changes saved to backup file: new_source_20241230_145834.json and new_source.json
+2024-12-30 14:58:34,868 - INFO - Exiting application
+2024-12-30 15:06:26,179 - INFO - Starting Apartment Renovation Manager
+2024-12-30 15:06:26,180 - INFO - Loading JSON from new_source.json
+2024-12-30 15:06:26,181 - INFO - Successfully loaded JSON from new_source.json
+2024-12-30 15:06:26,182 - INFO - Displaying complete renovation cost breakdown
+2024-12-30 15:06:26,186 - INFO - Room guest_bathroom total: 1397.99 AED
+2024-12-30 15:06:26,186 - INFO - Updated budget amount for guest_bathroom to 1397.99 AED
+2024-12-30 15:06:26,189 - INFO - Room kitchen total: 4248.0 AED
+2024-12-30 15:06:26,189 - INFO - Updated budget amount for kitchen to 4248.0 AED
+2024-12-30 15:06:26,190 - INFO - Room living_room total: 904.0 AED
+2024-12-30 15:06:26,190 - INFO - Updated budget amount for living_room to 904.0 AED
+2024-12-30 15:06:26,194 - INFO - Room master_bedroom total: 803.99 AED
+2024-12-30 15:06:26,195 - INFO - Updated budget amount for master_bedroom to 803.99 AED
+2024-12-30 15:06:26,198 - INFO - Total project cost: 7353.98 AED
+2024-12-30 15:06:26,198 - INFO - Updated total project budget to 7353.98 AED
+2024-12-30 15:06:26,199 - INFO - Displaying room list
+2024-12-30 15:06:59,567 - INFO - Selected room: guest_bathroom
+2024-12-30 15:06:59,567 - INFO - Starting edit session for room: guest_bathroom
+2024-12-30 15:06:59,567 - INFO - Displaying costs for room: guest_bathroom
+2024-12-30 15:06:59,568 - INFO - Room guest_bathroom total cost: 1397.99 AED
+2024-12-30 15:06:59,568 - INFO - Updated budget amount for guest_bathroom to 1397.99 AED
+2024-12-30 15:07:29,384 - INFO - Updated sink cost in room guest_bathroom: 379.0 -> 0.0
+2024-12-30 15:07:29,384 - INFO - Displaying costs for room: guest_bathroom
+2024-12-30 15:07:29,385 - INFO - Room guest_bathroom total cost: 1018.99 AED
+2024-12-30 15:07:29,385 - INFO - Updated budget amount for guest_bathroom to 1018.99 AED
+2024-12-30 15:07:31,030 - WARNING - Invalid input received while editing room guest_bathroom
+2024-12-30 15:07:34,118 - INFO - Exiting edit session for room: guest_bathroom
+2024-12-30 15:07:34,119 - INFO - Displaying complete renovation cost breakdown
+2024-12-30 15:07:34,120 - INFO - Room guest_bathroom total: 1018.99 AED
+2024-12-30 15:07:34,120 - INFO - Updated budget amount for guest_bathroom to 1018.99 AED
+2024-12-30 15:07:34,121 - INFO - Room kitchen total: 4248.0 AED
+2024-12-30 15:07:34,121 - INFO - Updated budget amount for kitchen to 4248.0 AED
+2024-12-30 15:07:34,122 - INFO - Room living_room total: 904.0 AED
+2024-12-30 15:07:34,122 - INFO - Updated budget amount for living_room to 904.0 AED
+2024-12-30 15:07:34,123 - INFO - Room master_bedroom total: 803.99 AED
+2024-12-30 15:07:34,123 - INFO - Updated budget amount for master_bedroom to 803.99 AED
+2024-12-30 15:07:34,123 - INFO - Total project cost: 6974.98 AED
+2024-12-30 15:07:34,124 - INFO - Updated total project budget to 6974.98 AED
+2024-12-30 15:07:34,124 - INFO - Displaying room list
+2024-12-30 15:08:22,118 - INFO - Creating backup file: new_source_20241230_150822.json
+2024-12-30 15:08:22,120 - INFO - Updating new_source.json
+2024-12-30 15:08:22,122 - INFO - Successfully saved JSON files
+2024-12-30 15:08:22,122 - INFO - Changes saved to backup file: new_source_20241230_150822.json and new_source.json
+2024-12-30 15:08:22,122 - INFO - Exiting application
+2024-12-30 15:14:56,578 - INFO - Starting Apartment Renovation Manager
+2024-12-30 15:14:56,578 - INFO - Loading JSON from new_source.json
+2024-12-30 15:14:56,578 - INFO - Successfully loaded JSON from new_source.json
+2024-12-30 15:14:56,579 - INFO - Displaying complete renovation cost breakdown
+2024-12-30 15:14:56,579 - INFO - Room guest_bathroom total: 1018.99 AED
+2024-12-30 15:14:56,580 - INFO - Updated budget amount for guest_bathroom to 1018.99 AED
+2024-12-30 15:14:56,580 - INFO - Room kitchen total: 4248.0 AED
+2024-12-30 15:14:56,580 - INFO - Updated budget amount for kitchen to 4248.0 AED
+2024-12-30 15:14:56,581 - INFO - Room living_room total: 904.0 AED
+2024-12-30 15:14:56,581 - INFO - Updated budget amount for living_room to 904.0 AED
+2024-12-30 15:14:56,582 - INFO - Room master_bedroom total: 803.99 AED
+2024-12-30 15:14:56,582 - INFO - Updated budget amount for master_bedroom to 803.99 AED
+2024-12-30 15:14:56,583 - INFO - Total project cost: 6974.98 AED
+2024-12-30 15:14:56,583 - INFO - Updated total project budget to 6974.98 AED
+2024-12-30 15:14:56,583 - INFO - Displaying room list
+2024-12-30 15:30:54,300 - WARNING - Invalid room selection input received
+2024-12-30 15:30:54,300 - INFO - Displaying complete renovation cost breakdown
+2024-12-30 15:30:54,301 - INFO - Room guest_bathroom total: 1018.99 AED
+2024-12-30 15:30:54,301 - INFO - Updated budget amount for guest_bathroom to 1018.99 AED
+2024-12-30 15:30:54,302 - INFO - Room kitchen total: 4248.0 AED
+2024-12-30 15:30:54,302 - INFO - Updated budget amount for kitchen to 4248.0 AED
+2024-12-30 15:30:54,303 - INFO - Room living_room total: 904.0 AED
+2024-12-30 15:30:54,303 - INFO - Updated budget amount for living_room to 904.0 AED
+2024-12-30 15:30:54,304 - INFO - Room master_bedroom total: 803.99 AED
+2024-12-30 15:30:54,304 - INFO - Updated budget amount for master_bedroom to 803.99 AED
+2024-12-30 15:30:54,304 - INFO - Total project cost: 6974.98 AED
+2024-12-30 15:30:54,304 - INFO - Updated total project budget to 6974.98 AED
+2024-12-30 15:30:54,304 - INFO - Displaying room list
+2024-12-30 15:31:05,259 - INFO - Creating backup file: new_source_20241230_153105.json
+2024-12-30 15:31:05,261 - INFO - Updating new_source.json
+2024-12-30 15:31:05,263 - INFO - Successfully saved JSON files
+2024-12-30 15:31:05,263 - INFO - Changes saved to backup file: new_source_20241230_153105.json and new_source.json
+2024-12-30 15:31:05,263 - INFO - Exiting application
+2024-12-30 15:36:35,429 - INFO - Starting Apartment Renovation Manager
+2024-12-30 15:36:35,429 - INFO - Loading JSON from new_source.json
+2024-12-30 15:36:35,430 - INFO - Successfully loaded JSON from new_source.json
+2024-12-30 15:36:35,430 - INFO - Displaying complete renovation cost breakdown
+2024-12-30 15:36:35,432 - INFO - Room guest_bathroom total: 1018.99 AED
+2024-12-30 15:36:35,432 - INFO - Updated budget amount for guest_bathroom to 1018.99 AED
+2024-12-30 15:36:35,433 - INFO - Room kitchen total: 4248.0 AED
+2024-12-30 15:36:35,433 - INFO - Updated budget amount for kitchen to 4248.0 AED
+2024-12-30 15:36:35,434 - INFO - Room living_room total: 904.0 AED
+2024-12-30 15:36:35,434 - INFO - Updated budget amount for living_room to 904.0 AED
+2024-12-30 15:36:35,436 - INFO - Room master_bedroom total: 803.99 AED
+2024-12-30 15:36:35,436 - INFO - Updated budget amount for master_bedroom to 803.99 AED
+2024-12-30 15:36:35,437 - INFO - Total project cost: 10474.98 AED
+2024-12-30 15:36:35,437 - INFO - Updated total project budget to 10474.98 AED
+2024-12-30 15:36:35,437 - INFO - Displaying room list
+2024-12-30 15:41:43,901 - INFO - Starting Apartment Renovation Manager
+2024-12-30 15:41:43,901 - INFO - Loading JSON from new_source.json
+2024-12-30 15:41:43,902 - INFO - Successfully loaded JSON from new_source.json
+2024-12-30 15:41:43,902 - INFO - Displaying complete renovation cost breakdown
+2024-12-30 15:41:43,903 - INFO - Room guest_bathroom total: 568.99 AED
+2024-12-30 15:41:43,903 - INFO - Updated budget amount for guest_bathroom to 568.99 AED
+2024-12-30 15:41:43,904 - INFO - Room kitchen total: 4248.0 AED
+2024-12-30 15:41:43,904 - INFO - Updated budget amount for kitchen to 4248.0 AED
+2024-12-30 15:41:43,905 - INFO - Room living_room total: 904.0 AED
+2024-12-30 15:41:43,905 - INFO - Updated budget amount for living_room to 904.0 AED
+2024-12-30 15:41:43,906 - INFO - Room master_bedroom total: 803.99 AED
+2024-12-30 15:41:43,906 - INFO - Updated budget amount for master_bedroom to 803.99 AED
+2024-12-30 15:41:43,918 - INFO - Total project cost: 10024.98 AED
+2024-12-30 15:41:43,918 - INFO - Updated total project budget to 10024.98 AED
+2024-12-30 15:41:43,918 - INFO - Displaying room list
+2024-12-30 16:03:17,986 - INFO - Starting Apartment Renovation Manager
+2024-12-30 16:03:17,986 - INFO - Loading JSON from new_source.json
+2024-12-30 16:03:17,987 - INFO - Successfully loaded JSON from new_source.json
+2024-12-30 16:09:12,406 - INFO - Starting Apartment Renovation Manager
+2024-12-30 16:09:12,406 - INFO - Loading JSON from new_source.json
+2024-12-30 16:09:12,407 - INFO - Successfully loaded JSON from new_source.json
+2024-12-30 16:11:45,797 - INFO - Displaying complete renovation cost breakdown
+2024-12-30 16:11:45,800 - INFO - Room guest_bathroom total: 568.99 AED
+2024-12-30 16:11:45,800 - INFO - Updated budget amount for guest_bathroom to 568.99 AED
+2024-12-30 16:11:45,801 - INFO - Room kitchen total: 4248.0 AED
+2024-12-30 16:11:45,801 - INFO - Updated budget amount for kitchen to 4248.0 AED
+2024-12-30 16:11:45,802 - INFO - Room living_room total: 904.0 AED
+2024-12-30 16:11:45,802 - INFO - Updated budget amount for living_room to 904.0 AED
+2024-12-30 16:11:45,803 - INFO - Room master_bedroom total: 803.99 AED
+2024-12-30 16:11:45,803 - INFO - Updated budget amount for master_bedroom to 803.99 AED
+2024-12-30 16:11:45,803 - INFO - Total project cost: 10024.98 AED
+2024-12-30 16:11:45,803 - INFO - Updated total project budget to 10024.98 AED
+2024-12-30 16:11:45,804 - INFO - Displaying room list
+2024-12-30 16:12:06,125 - INFO - Starting Apartment Renovation Manager
+2024-12-30 16:12:06,125 - INFO - Loading JSON from new_source.json
+2024-12-30 16:12:06,126 - INFO - Successfully loaded JSON from new_source.json
+2024-12-30 16:12:51,427 - INFO - Creating backup file: new_source_20241230_161251.json
+2024-12-30 16:12:51,429 - INFO - Updating new_source.json
+2024-12-30 16:12:51,434 - INFO - Successfully saved JSON files
+2024-12-30 16:12:51,434 - INFO - Changes saved to backup file: new_source_20241230_161251.json and new_source.json
+2024-12-30 16:12:51,436 - INFO - Exiting application
+2024-12-30 16:13:44,957 - INFO - Starting Apartment Renovation Manager
+2024-12-30 16:13:44,957 - INFO - Loading JSON from new_source.json
+2024-12-30 16:13:44,957 - INFO - Successfully loaded JSON from new_source.json
+2024-12-30 16:19:46,958 - INFO - Starting Apartment Renovation Manager
+2024-12-30 16:19:46,959 - INFO - Loading JSON from new_source.json
+2024-12-30 16:19:46,959 - INFO - Successfully loaded JSON from new_source.json
+2024-12-30 16:20:40,443 - INFO - Starting Apartment Renovation Manager
+2024-12-30 16:20:40,444 - INFO - Loading JSON from new_source.json
+2024-12-30 16:20:40,444 - INFO - Successfully loaded JSON from new_source.json
+2024-12-30 16:21:16,128 - INFO - Displaying complete renovation cost breakdown
+2024-12-30 16:21:16,129 - INFO - Room guest_bathroom total: 568.99 AED
+2024-12-30 16:21:16,129 - INFO - Updated budget amount for guest_bathroom to 568.99 AED
+2024-12-30 16:21:16,131 - INFO - Room kitchen total: 4248.0 AED
+2024-12-30 16:21:16,131 - INFO - Updated budget amount for kitchen to 4248.0 AED
+2024-12-30 16:21:16,133 - INFO - Room living_room total: 904.0 AED
+2024-12-30 16:21:16,133 - INFO - Updated budget amount for living_room to 904.0 AED
+2024-12-30 16:21:16,135 - INFO - Room master_bedroom total: 803.99 AED
+2024-12-30 16:21:16,135 - INFO - Updated budget amount for master_bedroom to 803.99 AED
+2024-12-30 16:21:16,137 - INFO - Total project cost: 10024.98 AED
+2024-12-30 16:21:16,137 - INFO - Updated total project budget to 10024.98 AED
+2024-12-30 16:21:16,138 - INFO - Displaying room list
+2024-12-30 16:40:31,155 - ERROR - EOF when reading a line
+2024-12-30 16:41:17,531 - ERROR - EOF when reading a line
+2024-12-30 17:54:09,517 - ERROR - cannot access local variable 'md_content' where it is not associated with a value
+2024-12-30 17:56:29,969 - ERROR - Error generating cost report: cannot access local variable 'md_content' where it is not associated with a value

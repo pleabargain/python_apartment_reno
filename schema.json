@@ -1,0 +1,480 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "required": ["project_name", "last_updated", "status", "rooms", "general_considerations"],
+  "properties": {
+    "project_name": {
+      "type": "string",
+      "description": "Name of the renovation project"
+    },
+    "last_updated": {
+      "type": "string",
+      "format": "date",
+      "description": "Date of last update in YYYY-MM-DD format"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["planning", "in_progress", "completed"],
+      "description": "Current status of the project"
+    },
+    "rooms": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": ["budget"],
+        "properties": {
+          "priority": {
+            "type": "string",
+            "enum": ["high", "medium", "low"],
+            "description": "Priority level for room renovation"
+          },
+          "projects": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["title", "description", "budget", "priority", "created_at"],
+              "properties": {
+                "title": {
+                  "type": "string",
+                  "description": "Title of the project"
+                },
+                "description": {
+                  "type": "string",
+                  "description": "Detailed description of the project"
+                },
+                "budget": {
+                  "type": "number",
+                  "minimum": 0,
+                  "description": "Budget allocated for this project"
+                },
+                "priority": {
+                  "type": "string",
+                  "enum": ["high", "medium", "low"],
+                  "description": "Priority level for this project"
+                },
+                "created_at": {
+                  "type": "string",
+                  "format": "date-time",
+                  "description": "Creation timestamp"
+                },
+                "status": {
+                  "type": "string",
+                  "enum": ["planned", "in_progress", "completed"],
+                  "default": "planned",
+                  "description": "Current status of the project"
+                },
+                "attachments": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "required": ["filename", "type", "uploaded_at"],
+                    "properties": {
+                      "filename": {
+                        "type": "string",
+                        "description": "Name of the uploaded file"
+                      },
+                      "type": {
+                        "type": "string",
+                        "enum": ["image", "document", "other"],
+                        "description": "Type of attachment"
+                      },
+                      "uploaded_at": {
+                        "type": "string",
+                        "format": "date-time",
+                        "description": "Upload timestamp"
+                      },
+                      "description": {
+                        "type": "string",
+                        "description": "Optional description of the attachment"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "budget": {
+            "type": "object",
+            "required": ["amount", "notes"],
+            "properties": {
+              "amount": {
+                "type": "number",
+                "minimum": 0,
+                "description": "Budget amount in dollars"
+              },
+              "notes": {
+                "type": "string"
+              },
+              "attachments": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": ["filename", "type", "uploaded_at"],
+                  "properties": {
+                    "filename": {
+                      "type": "string",
+                      "description": "Name of the uploaded file"
+                    },
+                    "type": {
+                      "type": "string",
+                      "enum": ["image", "document", "other"],
+                      "description": "Type of attachment"
+                    },
+                    "uploaded_at": {
+                      "type": "string",
+                      "format": "date-time",
+                      "description": "Upload timestamp"
+                    },
+                    "description": {
+                      "type": "string",
+                      "description": "Optional description of the attachment"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "square_footage": {
+            "type": "object",
+            "properties": {
+              "value": {
+                "type": "number",
+                "minimum": 0
+              },
+              "cost": {
+                "type": "number",
+                "minimum": 0
+              },
+              "notes": {
+                "type": "string"
+              },
+              "vendor": {
+                "type": "string"
+              },
+              "attachments": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "lighting": {
+            "type": "object",
+            "patternProperties": {
+              "^.*$": {
+                "type": "object",
+                "properties": {
+                  "items": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "cost": {
+                    "type": "number",
+                    "minimum": 0
+                  },
+                  "notes": {
+                    "type": "string"
+                  },
+                  "vendor": {
+                    "type": "string"
+                  },
+                  "attachments": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "painting": {
+            "type": "object",
+            "properties": {
+              "walls": {
+                "type": "object",
+                "properties": {
+                  "color": {
+                    "type": "string"
+                  },
+                  "finish": {
+                    "type": "string"
+                  },
+                  "paint_type": {
+                    "type": "string"
+                  },
+                  "cost": {
+                    "type": "number",
+                    "minimum": 0
+                  },
+                  "notes": {
+                    "type": "string"
+                  },
+                  "vendor": {
+                    "type": "string"
+                  },
+                  "attachments": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              "ceiling": {
+                "type": "object",
+                "properties": {
+                  "color": {
+                    "type": "string"
+                  },
+                  "finish": {
+                    "type": "string"
+                  },
+                  "cost": {
+                    "type": "number",
+                    "minimum": 0
+                  },
+                  "notes": {
+                    "type": "string"
+                  },
+                  "vendor": {
+                    "type": "string"
+                  },
+                  "attachments": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "general_considerations": {
+      "type": "object",
+      "required": ["building_management", "contractor_information", "timeline", "budget"],
+      "properties": {
+        "building_management": {
+          "type": "object",
+          "required": ["property_manager", "renovation_rules"],
+          "properties": {
+            "property_manager": {
+              "type": "object",
+              "required": ["name", "phone", "email"],
+              "properties": {
+                "name": {
+                  "type": "string"
+                },
+                "phone": {
+                  "type": "string",
+                  "pattern": "^[0-9-]+$"
+                },
+                "email": {
+                  "type": "string",
+                  "format": "email"
+                },
+                "office_hours": {
+                  "type": "string"
+                },
+                "emergency_contact": {
+                  "type": "string"
+                }
+              }
+            },
+            "renovation_rules": {
+              "type": "object",
+              "properties": {
+                "working_hours": {
+                  "type": "string"
+                },
+                "elevator_usage": {
+                  "type": "string"
+                },
+                "debris_removal": {
+                  "type": "string"
+                },
+                "noise_restrictions": {
+                  "type": "string"
+                },
+                "insurance_requirements": {
+                  "type": "string"
+                },
+                "attachments": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "contractor_information": {
+          "type": "object",
+          "properties": {
+            "general_contractor": {
+              "$ref": "#/definitions/contractor"
+            },
+            "electricians": {
+              "type": "object",
+              "patternProperties": {
+                "^electrician[0-9]+$": {
+                  "$ref": "#/definitions/contractor"
+                }
+              }
+            },
+            "painters": {
+              "type": "object",
+              "patternProperties": {
+                "^painter[0-9]+$": {
+                  "$ref": "#/definitions/contractor"
+                }
+              }
+            },
+            "plumbers": {
+              "type": "object",
+              "patternProperties": {
+                "^plumber[0-9]+$": {
+                  "$ref": "#/definitions/contractor"
+                }
+              }
+            },
+            "cabinet_designers": {
+              "type": "object",
+              "patternProperties": {
+                "^designer[0-9]+$": {
+                  "$ref": "#/definitions/contractor"
+                }
+              }
+            },
+            "cabinet_installers": {
+              "type": "object",
+              "patternProperties": {
+                "^installer[0-9]+$": {
+                  "$ref": "#/definitions/contractor"
+                }
+              }
+            }
+          }
+        },
+        "timeline": {
+          "type": "object",
+          "required": ["start_date", "estimated_duration"],
+          "properties": {
+            "start_date": {
+              "type": "string",
+              "format": "date"
+            },
+            "estimated_duration": {
+              "type": "string"
+            },
+            "phase_breakdown": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "notes": {
+              "type": "string"
+            },
+            "attachments": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "budget": {
+          "type": "object",
+          "required": ["total", "room_allocations"],
+          "properties": {
+            "total": {
+              "type": "number",
+              "minimum": 0
+            },
+            "room_allocations": {
+              "type": "object",
+              "patternProperties": {
+                "^.*$": {
+                  "type": "number",
+                  "minimum": 0
+                }
+              }
+            },
+            "contingency": {
+              "type": "number",
+              "minimum": 0
+            },
+            "notes": {
+              "type": "string"
+            },
+            "attachments": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "contractor": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "company": {
+          "type": "string"
+        },
+        "license_number": {
+          "type": "string"
+        },
+        "insurance": {
+          "type": "string"
+        },
+        "contact": {
+          "type": "object",
+          "properties": {
+            "phone": {
+              "type": "string"
+            },
+            "email": {
+              "type": "string",
+              "format": "email"
+            },
+            "address": {
+              "type": "string"
+            }
+          }
+        },
+        "pay_rate_by_hour": {
+          "type": "number",
+          "minimum": 0
+        },
+        "cost": {
+          "type": "number",
+          "minimum": 0
+        },
+        "notes": {
+          "type": "string"
+        },
+        "attachments": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

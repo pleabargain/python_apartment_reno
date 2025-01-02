@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Renovation Project Manager</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 20px;
+            background-color: #f5f5f5;
+        }
+        .section {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #444;
+            margin-top: 0;
+        }
+        h3 {
+            color: #555;
+            margin-top: 15px;
+            margin-bottom: 10px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #666;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="number"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+        textarea {
+            height: 100px;
+            resize: vertical;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .success-message {
+            color: #4CAF50;
+            margin-top: 10px;
+            display: none;
+        }
+        .info-banner {
+            background-color: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 4px;
+            padding: 10px;
+            margin-bottom: 20px;
+            color: #495057;
+        }
+        .info-banner code {
+            background-color: #e9ecef;
+            padding: 2px 4px;
+            border-radius: 3px;
+            font-family: monospace;
+        }
+        .note {
+            font-size: 0.9em;
+            color: #6c757d;
+            margin-top: 5px;
+        }
+        .subsection {
+            margin-bottom: 15px;
+            padding-left: 15px;
+        }
+        /* Tab Styles */
+        .tabs {
+            display: flex;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #ddd;
+            padding: 0;
+            list-style: none;
+        }
+        .tab {
+            padding: 10px 20px;
+            cursor: pointer;
+            margin-right: 5px;
+            border: 1px solid #ddd;
+            border-bottom: none;
+            border-radius: 4px 4px 0 0;
+            background: #f8f9fa;
+        }
+        .tab.active {
+            background: white;
+            border-bottom: 2px solid white;
+            margin-bottom: -2px;
+            font-weight: bold;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        /* JSON View Styles */
+        #json-view {
+            background-color: #1e1e1e;
+            color: #d4d4d4;
+            padding: 20px;
+            border-radius: 4px;
+            font-family: 'Consolas', monospace;
+            white-space: pre-wrap;
+            overflow-x: auto;
+            font-size: 14px;
+            margin-top: 20px;
+        }
+        #json-view .timestamp {
+            color: #569cd6;
+            margin-bottom: 10px;
+            font-style: italic;
+        }
+        .json-controls {
+            margin-bottom: 20px;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 4px;
+            border: 1px solid #dee2e6;
+        }
+        .json-controls select {
+            max-width: 300px;
+            margin-right: 10px;
+        }
+        .json-controls button {
+            margin-right: 10px;
+        }
+        .json-status {
+            margin-top: 10px;
+            padding: 10px;
+            border-radius: 4px;
+            display: none;
+        }
+        .json-status.success {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        .json-status.error {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        .room-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .priority-tag {
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 0.9em;
+            font-weight: bold;
+        }
+        .priority-high {
+            background-color: #ffebee;
+            color: #c62828;
+        }
+        .priority-medium {
+            background-color: #fff3e0;
+            color: #ef6c00;
+        }
+        .priority-low {
+            background-color: #e8f5e9;
+            color: #2e7d32;
+        }
+
+        /* Project Styles */
+        .projects-section {
+            margin-top: 20px;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 4px;
+            border: 1px solid #dee2e6;
+        }
+        .project-card {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 15px;
+            margin-bottom: 15px;
+        }
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .project-title {
+            font-size: 1.1em;
+            font-weight: bold;
+            color: #333;
+        }
+        .project-status {
+            padding: 3px 8px;
+            border-radius: 12px;
+            font-size: 0.9em;
+        }
+        .status-planned {
+            background: #e3f2fd;
+            color: #1976d2;
+        }
+        .status-in-progress {
+            background: #fff3e0;
+            color: #f57c00;
+        }
+        .status-completed {
+            background: #e8f5e9;
+            color: #388e3c;
+        }
+        .project-details {
+            margin-top: 10px;
+            font-size: 0.9em;
+            color: #666;
+        }
+        .project-budget {
+            color: #2e7d32;
+            font-weight: bold;
+        }
+        .add-project-form {
+            display: none;
+            background: white;
+            padding: 20px;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+            margin-bottom: 20px;
+        }
+        .add-project-btn {
+            background-color: #2196f3;
+            margin-bottom: 15px;
+        }
+        .add-project-btn:hover {
+            background-color: #1976d2;
+        }
+
+        /* File Upload Styles */
+        .files-section {
+            margin-top: 20px;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 4px;
+            border: 1px solid #dee2e6;
+        }
+        .file-upload {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+        .file-upload input[type="file"] {
+            flex: 1;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background: white;
+        }
+        .files-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
+        }
+        .file-card {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 10px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+        .file-card:hover {
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transform: translateY(-2px);
+        }
+        .file-thumbnail {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 4px;
+            margin-bottom: 10px;
+            background-color: #f8f9fa;
+        }
+        .file-thumbnail.document {
+            object-fit: contain;
+            padding: 20px;
+        }
+        .file-name {
+            font-size: 0.9em;
+            color: #333;
+            word-break: break-all;
+        }
+        .file-type {
+            font-size: 0.8em;
+            color: #666;
+            margin-top: 5px;
+        }
+        .file-timestamp {
+            font-size: 0.8em;
+            color: #999;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Renovation Project Manager</h1>
+    
+    <div class="info-banner">
+        <div><strong>File Information:</strong></div>
+        <div>Changes will be saved to: <code>converted_source.json</code></div>
+        <div class="note">This file contains the complete renovation project data.</div>
+    </div>
+
+    <div class="section">
+        <ul class="tabs">
+            <li class="tab active" onclick="switchTab('guest-bathroom')">Guest Bathroom</li>
+            <li class="tab" onclick="switchTab('kitchen')">Kitchen</li>
+            <li class="tab" onclick="switchTab('living-room')">Living Room</li>
+            <li class="tab" onclick="switchTab('master-bedroom')">Master Bedroom</li>
+            <li class="tab" onclick="switchTab('json-data')">JSON View</li>
+        </ul>
+
+        <!-- Guest Bathroom Tab -->
+        <div id="guest-bathroom" class="tab-content active">
+            <div class="room-header">
+                <h2>Guest Bathroom</h2>
+                <div class="form-group" style="width: 200px;">
+                    <label for="guest-bathroom-priority">Priority:</label>
+                    <select id="guest-bathroom-priority">
+                        <option value="high">High</option>
+                        <option value="medium">Medium</option>
+                        <option value="low" selected>Low</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="guest-bathroom-budget">Budget Amount ($):</label>
+                <input type="number" id="guest-bathroom-budget" value="1018.99" step="0.01">
+            </div>
+            <div class="form-group">
+                <label for="guest-bathroom-budget-notes">Budget Notes:</label>
+                <textarea id="guest-bathroom-budget-notes">Focus on essential updates, keeping existing layout</textarea>
+            </div>
+            <div class="form-group">
+                <label for="guest-bathroom-sqft">Square Footage:</label>
+                <input type="number" id="guest-bathroom-sqft" value="40">
+            </div>
+            <h3>Painting</h3>
+            <div class="subsection">
+                <div class="form-group">
+                    <label for="guest-bathroom-wall-color">Wall Color:</label>
+                    <input type="text" id="guest-bathroom-wall-color" value="Benjamin Moore Pale Oak OC-20">
+                </div>
+                <div class="form-group">
+                    <label for="guest-bathroom-wall-finish">Wall Finish:</label>
+                    <input type="text" id="guest-bathroom-wall-finish" value="Eggshell">
+                </div>
+                <div class="form-group">
+                    <label for="guest-bathroom-wall-cost">Wall Paint Cost ($):</label>
+                    <input type="number" id="guest-bathroom-wall-cost" value="145.00" step="0.01">
+                </div>
+            </div>
+            
+            <h3>Projects</h3>
+            <div class="projects-section">
+                <button onclick="showAddProjectForm('guest_bathroom')" class="add-project-btn">Add New Project</button>
+                <div id="add-project-form-guest_bathroom" class="add-project-form">
+                    <div class="form-group">
+                        <label for="project-title">Project Title:</label>
+                        <input type="text" id="project-title" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="project-description">Description:</label>
+                        <textarea id="project-description" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="project-budget">Budget ($):</label>
+                        <input type="number" id="project-budget" step="0.01" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="project-priority">Priority:</label>
+                        <select id="project-priority" required>
+                            <option value="high">High</option>
+                            <option value="medium">Medium</option>
+                            <option value="low">Low</option>
+                        </select>
+                    </div>
+                    <button onclick="addProject('guest_bathroom')">Create Project</button>
+                    <button onclick="hideAddProjectForm('guest_bathroom')" style="background-color: #dc3545;">Cancel</button>
+                </div>
+                <div id="guest-bathroom-projects" class="projects-list"></div>
+            </div>
+
+            <h3>Files</h3>
+            <div class="files-section">
+                <div class="file-upload">
+                    <input type="file" id="guest-bathroom-file" onchange="handleFileSelect(event, 'guest_bathroom')">
+                    <button onclick="uploadFile('guest_bathroom')">Upload File</button>
+                </div>
+                <div id="guest-bathroom-files" class="files-list"></div>
+            </div>
+        </div>
+
+        <!-- Kitchen Tab -->
+        <div id="kitchen" class="tab-content">
+            <div class="room-header">
+                <h2>Kitchen</h2>
+                <div class="form-group" style="width: 200px;">
+                    <label for="kitchen-priority">Priority:</label>
+                    <select id="kitchen-priority">
+                        <option value="high" selected>High</option>
+                        <option value="medium">Medium</option>
+                        <option value="low">Low</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="kitchen-budget">Budget Amount ($):</label>
+                <input type="number" id="kitchen-budget" value="4248.00" step="0.01">
+            </div>
+            <div class="form-group">
+                <label for="kitchen-budget-notes">Budget Notes:</label>
+                <textarea id="kitchen-budget-notes">Priority on appliances and countertops</textarea>
+            </div>
+        </div>
+
+        <!-- Living Room Tab -->
+        <div id="living-room" class="tab-content">
+            <div class="room-header">
+                <h2>Living Room</h2>
+                <div class="form-group" style="width: 200px;">
+                    <label for="living-room-priority">Priority:</label>
+                    <select id="living-room-priority">
+                        <option value="high">High</option>
+                        <option value="medium">Medium</option>
+                        <option value="low" selected>Low</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="living-room-budget">Budget Amount ($):</label>
+                <input type="number" id="living-room-budget" value="904.00" step="0.01">
+            </div>
+            <div class="form-group">
+                <label for="living-room-budget-notes">Budget Notes:</label>
+                <textarea id="living-room-budget-notes">Focus on flooring and paint</textarea>
+            </div>
+        </div>
+
+        <!-- Master Bedroom Tab -->
+        <div id="master-bedroom" class="tab-content">
+            <div class="room-header">
+                <h2>Master Bedroom</h2>
+                <div class="form-group" style="width: 200px;">
+                    <label for="master-bedroom-priority">Priority:</label>
+                    <select id="master-bedroom-priority">
+                        <option value="high">High</option>
+                        <option value="medium">Medium</option>
+                        <option value="low" selected>Low</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="master-bedroom-budget">Budget Amount ($):</label>
+                <input type="number" id="master-bedroom-budget" value="803.99" step="0.01">
+            </div>
+            <div class="form-group">
+                <label for="master-bedroom-budget-notes">Budget Notes:</label>
+                <textarea id="master-bedroom-budget-notes">New flooring and closet organization</textarea>
+            </div>
+            <h3>Painting</h3>
+            <div class="subsection">
+                <div class="form-group">
+                    <label for="master-bedroom-wall-color">Wall Color:</label>
+                    <input type="text" id="master-bedroom-wall-color" value="Sherwin Williams Agreeable Gray">
+                </div>
+                <div class="form-group">
+                    <label for="master-bedroom-wall-finish">Wall Finish:</label>
+                    <input type="text" id="master-bedroom-wall-finish" value="Eggshell">
+                </div>
+                <div class="form-group">
+                    <label for="master-bedroom-wall-cost">Wall Paint Cost ($):</label>
+                    <input type="number" id="master-bedroom-wall-cost" value="165.00" step="0.01">
+                </div>
+            </div>
+        </div>
+
+        <!-- JSON View Tab -->
+        <div id="json-data" class="tab-content">
+            <h2>Current JSON Data</h2>
+            <div class="json-controls">
+                <select id="json-file-select" style="width: 300px;">
+                    <option value="">Select a JSON file...</option>
+                </select>
+                <button onclick="loadSelectedJson()">Load Selected File</button>
+                <button onclick="refreshJsonList()">Refresh File List</button>
+                <div id="json-status" class="json-status"></div>
+            </div>
+            <div id="json-view">Loading...</div>
+        </div>
+    </div>
+
+    <button onclick="saveChanges()">Save Changes</button>
+    <div id="success-message" class="success-message">Changes saved successfully!</div>
+
+    <script>
+        function switchTab(tabId) {
+            document.querySelectorAll('.tab-content').forEach(content => {
+                content.classList.remove('active');
+            });
+            
+            document.querySelectorAll('.tab').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            
+            document.getElementById(tabId).classList.add('active');
+            
+            const selectedTab = Array.from(document.querySelectorAll('.tab')).find(tab => 
+                tab.textContent.toLowerCase().replace(' ', '-') === tabId
+            );
+            if (selectedTab) {
+                selectedTab.classList.add('active');
+            }
+        }
+
+        function saveChanges() {
+            const rooms = {
+                guest_bathroom: {
+                    priority: document.getElementById('guest-bathroom-priority').value,
+                    budget: {
+                        amount: parseFloat(document.getElementById('guest-bathroom-budget').value),
+                        notes: document.getElementById('guest-bathroom-budget-notes').value,
+                        attachments: ["guest_bath_inspiration.jpg", "contractor_quote.pdf"]
+                    },
+                    square_footage: {
+                        value: parseInt(document.getElementById('guest-bathroom-sqft').value),
+                        cost: 0,
+                        notes: "No structural changes planned",
+                        vendor: "",
+                        attachments: ["floor_plan.pdf"]
+                    },
+                    painting: {
+                        walls: {
+                            color: document.getElementById('guest-bathroom-wall-color').value,
+                            finish: document.getElementById('guest-bathroom-wall-finish').value,
+                            paint_type: "bathroom_specific",
+                            cost: parseFloat(document.getElementById('guest-bathroom-wall-cost').value),
+                            notes: "2 gallons needed",
+                            vendor: "Benjamin Moore Store",
+                            attachments: ["paint_swatch.jpg"]
+                        }
+                    }
+                },
+                kitchen: {
+                    priority: document.getElementById('kitchen-priority').value,
+                    budget: {
+                        amount: parseFloat(document.getElementById('kitchen-budget').value),
+                        notes: document.getElementById('kitchen-budget-notes').value,
+                        attachments: ["kitchen_layout.pdf"]
+                    }
+                },
+                living_room: {
+                    priority: document.getElementById('living-room-priority').value,
+                    budget: {
+                        amount: parseFloat(document.getElementById('living-room-budget').value),
+                        notes: document.getElementById('living-room-budget-notes').value,
+                        attachments: ["living_room_plan.pdf"]
+                    }
+                },
+                master_bedroom: {
+                    priority: document.getElementById('master-bedroom-priority').value,
+                    budget: {
+                        amount: parseFloat(document.getElementById('master-bedroom-budget').value),
+                        notes: document.getElementById('master-bedroom-budget-notes').value,
+                        attachments: ["bedroom_layout.pdf"]
+                    },
+                    painting: {
+                        walls: {
+                            color: document.getElementById('master-bedroom-wall-color').value,
+                            finish: document.getElementById('master-bedroom-wall-finish').value,
+                            paint_type: "low-VOC",
+                            cost: parseFloat(document.getElementById('master-bedroom-wall-cost').value),
+                            notes: "2 gallons needed for complete coverage",
+                            vendor: "Sherwin Williams",
+                            attachments: ["master_paint_swatch.jpg"]
+                        }
+                    }
+                }
+            };
+
+            fetch('http://127.0.0.1:8000/save_rooms', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(rooms)
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Save response:', data);
+                const successMessage = document.getElementById('success-message');
+                successMessage.style.display = 'block';
+                setTimeout(() => {
+                    successMessage.style.display = 'none';
+                }, 3000);
+            })
+            .catch(error => {
+                console.error('Error saving changes:', error);
+                alert('Error saving changes. Please try again.');
+            });
+        }
+
+        function loadJsonData() {
+            fetch('http://127.0.0.1:8000/converted_source.json')
+                .then(response => response.json())
+                .then(data => {
+                    const jsonView = document.getElementById('json-view');
+                    const timestamp = new Date().toLocaleString();
+                    jsonView.innerHTML = `<div class="timestamp">Last Updated: ${timestamp}</div>` +
+                        JSON.stringify(data, null, 2);
+                })
+                .catch(error => {
+                    console.error('Error loading JSON data:', error);
+                    document.getElementById('json-view').innerHTML = 'Error loading JSON data';
+                });
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            loadJsonData();
+            refreshJsonList();
+            loadProjects('guest_bathroom');
+            loadFiles('guest_bathroom');
+        });
+
+        const originalSaveChanges = saveChanges;
+        saveChanges = function() {
+            originalSaveChanges();
+            setTimeout(() => {
+                loadJsonData();
+                refreshJsonList();
+            }, 1000);
+        };
+
+        function showStatus(message, isError = false) {
+            const statusDiv = document.getElementById('json-status');
+            statusDiv.textContent = message;
+            statusDiv.className = 'json-status ' + (isError ? 'error' : 'success');
+            statusDiv.style.display = 'block';
+            setTimeout(() => {
+                statusDiv.style.display = 'none';
+            }, 5000);
+        }
+
+        function refreshJsonList() {
+            fetch('http://127.0.0.1:8000/list_json_files')
+                .then(response => response.json())
+                .then(files => {
+                    const select = document.getElementById('json-file-select');
+                    select.innerHTML = '<option value="">Select a JSON file...</option>';
+                    files.sort().reverse().forEach(file => {
+                        const option = document.createElement('option');
+                        option.value = file;
+                        option.textContent = file;
+                        select.appendChild(option);
+                    });
+                })
+                .catch(error => {
+                    console.error('Error loading file list:', error);
+                    showStatus('Error loading file list', true);
+                });
+        }
+
+        function loadSelectedJson() {
+            const select = document.getElementById('json-file-select');
+            const selectedFile = select.value;
+            
+            if (!selectedFile) {
+                showStatus('Please select a file to load', true);
+                return;
+            }
+
+            fetch(`http://127.0.0.1:8000/load_json/${selectedFile}`)
+                .then(response => response.json())
+                .then(data => {
+                    showStatus('File loaded successfully');
+                    loadJsonData();
+                })
+                .catch(error => {
+                    console.error('Error loading file:', error);
+                    showStatus('Error loading file', true);
+                });
+        }
+
+        function showAddProjectForm(roomName) {
+            document.getElementById(`add-project-form-${roomName}`).style.display = 'block';
+        }
+
+        function hideAddProjectForm(roomName) {
+            document.getElementById(`add-project-form-${roomName}`).style.display = 'none';
+        }
+
+        function addProject(roomName) {
+            const title = document.getElementById('project-title').value;
+            const description = document.getElementById('project-description').value;
+            const budget = parseFloat(document.getElementById('project-budget').value);
+            const priority = document.getElementById('project-priority').value;
+
+            if (!title || !description || isNaN(budget)) {
+                alert('Please fill in all required fields');
+                return;
+            }
+
+            const projectData = {
+                title,
+                description,
+                budget,
+                priority,
+                room_name: roomName
+            };
+
+            fetch('http://127.0.0.1:8000/add_project', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(projectData)
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Project added:', data);
+                hideAddProjectForm(roomName);
+                loadProjects(roomName);
+                showStatus('Project added successfully');
+            })
+            .catch(error => {
+                console.error('Error adding project:', error);
+                showStatus('Error adding project', true);
+            });
+        }
+
+        function loadProjects(roomName) {
+            fetch('http://127.0.0.1:8000/converted_source.json')
+                .then(response => response.json())
+                .then(data => {
+                    const projects = data.rooms[roomName].projects || [];
+                    const projectsList = document.getElementById(`${roomName}-projects`);
+                    projectsList.innerHTML = projects.map(project => `
+                        <div class="project-card">
+                            <div class="project-header">
+                                <div class="project-title">${project.title}</div>
+                                <div class="project-status status-${project.status}">${project.status}</div>
+                            </div>
+                            <div class="project-details">
+                                <div>${project.description}</div>
+                                <div class="project-budget">Budget: $${project.budget.toFixed(2)}</div>
+                                <div>Priority: ${project.priority}</div>
+                            </div>
+                        </div>
+                    `).join('');
+                })
+                .catch(error => {
+                    console.error('Error loading projects:', error);
+                });
+        }
+
+        function handleFileSelect(event, roomName) {
+            const file = event.target.files[0];
+            if (!file) return;
+            window[`${roomName}FileToUpload`] = file;
+        }
+
+        function uploadFile(roomName) {
+            const file = window[`${roomName}FileToUpload`];
+            if (!file) {
+                showStatus('Please select a file first', true);
+                return;
+            }
+
+            const formData = new FormData();
+            formData.append('file', file);
+            formData.append('room_name', roomName);
+
+            fetch('http://127.0.0.1:8000/upload', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log('File uploaded:', data);
+                loadFiles(roomName);
+                showStatus('File uploaded successfully');
+                document.getElementById(`${roomName}-file`).value = '';
+                window[`${roomName}FileToUpload`] = null;
+            })
+            .catch(error => {
+                console.error('Error uploading file:', error);
+                showStatus('Error uploading file', true);
+            });
+        }
+
+        function loadFiles(roomName) {
+            fetch('http://127.0.0.1:8000/converted_source.json')
+                .then(response => response.json())
+                .then(data => {
+                    const room = data.rooms[roomName];
+                    const files = [];
+                    
+                    if (room.budget && room.budget.attachments) {
+                        files.push(...room.budget.attachments);
+                    }
+                    if (room.projects) {
+                        room.projects.forEach(project => {
+                            if (project.attachments) {
+                                files.push(...project.attachments);
+                            }
+                        });
+                    }
+
+                    const filesList = document.getElementById(`${roomName}-files`);
+                    filesList.innerHTML = files.map(file => {
+                        // Handle both new uploads and existing files
+                        const isNewUpload = typeof file === 'object';
+                        const filename = isNewUpload ? file.filename : file;
+                        const displayName = isNewUpload ? (file.original_filename || file.filename) : filename;
+                        const fileType = isNewUpload ? file.type : (filename.match(/\.(jpg|jpeg|png|gif)$/i) ? 'image' : 'document');
+                        const timestamp = isNewUpload ? file.uploaded_at : null;
+                        
+                        return `
+                            <a href="/uploads/${roomName}/${filename}" 
+                               class="file-card" 
+                               target="_blank"
+                               title="Click to open ${displayName}">
+                                <img src="/uploads/${roomName}/${filename}" 
+                                     class="file-thumbnail ${fileType === 'document' ? 'document' : ''}" 
+                                     onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22><path fill=%22%23666%22 d=%22M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm4 18H6V4h7v5h5v11z%22/></svg>'">
+                                <div class="file-name">${displayName}</div>
+                                <div class="file-type">${fileType}</div>
+                                ${timestamp ? `<div class="file-timestamp">${new Date(timestamp).toLocaleString()}</div>` : ''}
+                            </a>
+                        `;
+                    }).join('');
+                })
+                .catch(error => {
+                    console.error('Error loading files:', error);
+                });
+        }
+    </script>
+</body>
+</html>
