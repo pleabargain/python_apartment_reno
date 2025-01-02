@@ -1,3 +1,11 @@
+
+# repo
+https://github.com/pleabargain/python_apartment_reno
+
+
+# goal make a system that can track the progress of a renovation project
+
+
 # Apartment Renovation Manager
 
 A comprehensive data management system for tracking and organizing apartment renovation projects. This system helps manage renovation details, costs, contractor information, and documentation across multiple rooms.

@@ -1,6 +1,12 @@
 # Active Context
 
 ## Current Task
+Do not include  the JSON data in the building_management_server.py file.
+check the versions directory for the JSON file 
+load the most recent JSON file
+update the HTML pages to display the data
+
+
 Implementing happiness tracking system and GitHub integration workflow.
 
 ## Recent Changes

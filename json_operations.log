@@ -23,3 +23,141 @@ Traceback (most recent call last):
     os.makedirs(os.path.dirname(filepath), exist_ok=True)
   File "<frozen os>", line 225, in makedirs
 FileNotFoundError: [WinError 3] The system cannot find the path specified: ''
+2025-01-02 21:29:15,331 - INFO - [building_management_server.py:47] - Attempting to load JSON file: versions\renovation_data_2025-01-02_15-03-26.json
+2025-01-02 21:29:15,340 - INFO - [building_management_server.py:52] - Successfully loaded JSON from versions\renovation_data_2025-01-02_15-03-26.json
+2025-01-02 21:29:15,340 - INFO - [building_management_server.py:73] - Attempting to save JSON file: converted_source.json
+2025-01-02 21:29:15,346 - INFO - [building_management_server.py:87] - Successfully saved JSON to converted_source.json
+2025-01-02 21:29:28,090 - INFO - [building_management_server.py:47] - Attempting to load JSON file: converted_source.json
+2025-01-02 21:29:28,091 - INFO - [building_management_server.py:52] - Successfully loaded JSON from converted_source.json
+2025-01-02 21:29:28,096 - INFO - [building_management_server.py:47] - Attempting to load JSON file: converted_source.json
+2025-01-02 21:29:28,097 - INFO - [building_management_server.py:52] - Successfully loaded JSON from converted_source.json
+2025-01-02 21:30:30,261 - INFO - [building_management_server.py:47] - Attempting to load JSON file: converted_source.json
+2025-01-02 21:30:30,262 - INFO - [building_management_server.py:52] - Successfully loaded JSON from converted_source.json
+2025-01-02 21:30:30,264 - INFO - [building_management_server.py:47] - Attempting to load JSON file: versions\renovation_data_2025-01-02_15-03-26.json
+2025-01-02 21:30:30,265 - INFO - [building_management_server.py:52] - Successfully loaded JSON from versions\renovation_data_2025-01-02_15-03-26.json
+2025-01-02 21:30:30,266 - INFO - [building_management_server.py:538] - Starting JSON structure validation
+2025-01-02 21:30:30,266 - DEBUG - [building_management_server.py:546] - Found required field: project_name
+2025-01-02 21:30:30,266 - DEBUG - [building_management_server.py:546] - Found required field: last_updated
+2025-01-02 21:30:30,276 - DEBUG - [building_management_server.py:546] - Found required field: status
+2025-01-02 21:30:30,276 - DEBUG - [building_management_server.py:546] - Found required field: rooms
+2025-01-02 21:30:30,277 - DEBUG - [building_management_server.py:554] - Validating room: guest_bathroom
+2025-01-02 21:30:30,277 - DEBUG - [building_management_server.py:554] - Validating room: kitchen
+2025-01-02 21:30:30,277 - DEBUG - [building_management_server.py:554] - Validating room: living_room
+2025-01-02 21:30:30,277 - DEBUG - [building_management_server.py:554] - Validating room: master_bedroom
+2025-01-02 21:30:30,277 - INFO - [building_management_server.py:566] - JSON structure validation completed successfully
+2025-01-02 21:30:30,277 - INFO - [building_management_server.py:73] - Attempting to save JSON file: converted_source.json
+2025-01-02 21:30:30,281 - INFO - [building_management_server.py:87] - Successfully saved JSON to converted_source.json
+2025-01-02 21:30:30,282 - INFO - [building_management_server.py:47] - Attempting to load JSON file: versions\renovation_data_2025-01-02_15-03-26.json
+2025-01-02 21:30:30,283 - INFO - [building_management_server.py:52] - Successfully loaded JSON from versions\renovation_data_2025-01-02_15-03-26.json
+2025-01-02 21:30:30,284 - INFO - [building_management_server.py:538] - Starting JSON structure validation
+2025-01-02 21:30:30,285 - DEBUG - [building_management_server.py:546] - Found required field: project_name
+2025-01-02 21:30:30,285 - DEBUG - [building_management_server.py:546] - Found required field: last_updated
+2025-01-02 21:30:30,285 - DEBUG - [building_management_server.py:546] - Found required field: status
+2025-01-02 21:30:30,285 - DEBUG - [building_management_server.py:546] - Found required field: rooms
+2025-01-02 21:30:30,285 - DEBUG - [building_management_server.py:554] - Validating room: guest_bathroom
+2025-01-02 21:30:30,286 - DEBUG - [building_management_server.py:554] - Validating room: kitchen
+2025-01-02 21:30:30,286 - DEBUG - [building_management_server.py:554] - Validating room: living_room
+2025-01-02 21:30:30,286 - DEBUG - [building_management_server.py:554] - Validating room: master_bedroom
+2025-01-02 21:30:30,286 - INFO - [building_management_server.py:566] - JSON structure validation completed successfully
+2025-01-02 21:30:30,287 - INFO - [building_management_server.py:73] - Attempting to save JSON file: converted_source.json
+2025-01-02 21:30:30,292 - INFO - [building_management_server.py:87] - Successfully saved JSON to converted_source.json
+2025-01-02 21:30:30,293 - INFO - [building_management_server.py:47] - Attempting to load JSON file: versions\renovation_data_2025-01-02_15-03-26.json
+2025-01-02 21:30:30,294 - INFO - [building_management_server.py:52] - Successfully loaded JSON from versions\renovation_data_2025-01-02_15-03-26.json
+2025-01-02 21:30:30,294 - INFO - [building_management_server.py:538] - Starting JSON structure validation
+2025-01-02 21:30:30,295 - DEBUG - [building_management_server.py:546] - Found required field: project_name
+2025-01-02 21:30:30,295 - DEBUG - [building_management_server.py:546] - Found required field: last_updated
+2025-01-02 21:30:30,295 - DEBUG - [building_management_server.py:546] - Found required field: status
+2025-01-02 21:30:30,295 - DEBUG - [building_management_server.py:546] - Found required field: rooms
+2025-01-02 21:30:30,295 - DEBUG - [building_management_server.py:554] - Validating room: guest_bathroom
+2025-01-02 21:30:30,296 - DEBUG - [building_management_server.py:554] - Validating room: kitchen
+2025-01-02 21:30:30,296 - DEBUG - [building_management_server.py:554] - Validating room: living_room
+2025-01-02 21:30:30,296 - DEBUG - [building_management_server.py:554] - Validating room: master_bedroom
+2025-01-02 21:30:30,296 - INFO - [building_management_server.py:566] - JSON structure validation completed successfully
+2025-01-02 21:30:30,296 - INFO - [building_management_server.py:73] - Attempting to save JSON file: converted_source.json
+2025-01-02 21:30:30,299 - INFO - [building_management_server.py:87] - Successfully saved JSON to converted_source.json
+2025-01-02 21:30:30,301 - INFO - [building_management_server.py:47] - Attempting to load JSON file: versions\renovation_data_2025-01-02_15-03-26.json
+2025-01-02 21:30:30,303 - INFO - [building_management_server.py:52] - Successfully loaded JSON from versions\renovation_data_2025-01-02_15-03-26.json
+2025-01-02 21:30:30,304 - INFO - [building_management_server.py:538] - Starting JSON structure validation
+2025-01-02 21:30:30,304 - DEBUG - [building_management_server.py:546] - Found required field: project_name
+2025-01-02 21:30:30,304 - DEBUG - [building_management_server.py:546] - Found required field: last_updated
+2025-01-02 21:30:30,304 - DEBUG - [building_management_server.py:546] - Found required field: status
+2025-01-02 21:30:30,305 - DEBUG - [building_management_server.py:546] - Found required field: rooms
+2025-01-02 21:30:30,305 - DEBUG - [building_management_server.py:554] - Validating room: guest_bathroom
+2025-01-02 21:30:30,305 - DEBUG - [building_management_server.py:554] - Validating room: kitchen
+2025-01-02 21:30:30,305 - DEBUG - [building_management_server.py:554] - Validating room: living_room
+2025-01-02 21:30:30,306 - DEBUG - [building_management_server.py:554] - Validating room: master_bedroom
+2025-01-02 21:30:30,306 - INFO - [building_management_server.py:566] - JSON structure validation completed successfully
+2025-01-02 21:30:30,306 - INFO - [building_management_server.py:73] - Attempting to save JSON file: converted_source.json
+2025-01-02 21:30:30,311 - INFO - [building_management_server.py:87] - Successfully saved JSON to converted_source.json
+2025-01-02 21:30:30,319 - INFO - [building_management_server.py:47] - Attempting to load JSON file: versions\renovation_data_2025-01-02_15-03-26.json
+2025-01-02 21:30:30,320 - INFO - [building_management_server.py:52] - Successfully loaded JSON from versions\renovation_data_2025-01-02_15-03-26.json
+2025-01-02 21:30:30,320 - INFO - [building_management_server.py:538] - Starting JSON structure validation
+2025-01-02 21:30:30,321 - DEBUG - [building_management_server.py:546] - Found required field: project_name
+2025-01-02 21:30:30,321 - DEBUG - [building_management_server.py:546] - Found required field: last_updated
+2025-01-02 21:30:30,321 - DEBUG - [building_management_server.py:546] - Found required field: status
+2025-01-02 21:30:30,322 - DEBUG - [building_management_server.py:546] - Found required field: rooms
+2025-01-02 21:30:30,324 - DEBUG - [building_management_server.py:554] - Validating room: guest_bathroom
+2025-01-02 21:30:30,332 - DEBUG - [building_management_server.py:554] - Validating room: kitchen
+2025-01-02 21:30:30,337 - DEBUG - [building_management_server.py:554] - Validating room: living_room
+2025-01-02 21:30:30,341 - DEBUG - [building_management_server.py:554] - Validating room: master_bedroom
+2025-01-02 21:30:30,341 - INFO - [building_management_server.py:566] - JSON structure validation completed successfully
+2025-01-02 21:30:30,343 - INFO - [building_management_server.py:73] - Attempting to save JSON file: converted_source.json
+2025-01-02 21:30:30,348 - INFO - [building_management_server.py:87] - Successfully saved JSON to converted_source.json
+2025-01-02 21:30:30,426 - INFO - [building_management_server.py:47] - Attempting to load JSON file: converted_source.json
+2025-01-02 21:30:30,438 - INFO - [building_management_server.py:52] - Successfully loaded JSON from converted_source.json
+2025-01-02 21:30:30,442 - INFO - [building_management_server.py:47] - Attempting to load JSON file: converted_source.json
+2025-01-02 21:30:30,443 - INFO - [building_management_server.py:52] - Successfully loaded JSON from converted_source.json
+2025-01-02 21:30:30,448 - INFO - [building_management_server.py:47] - Attempting to load JSON file: converted_source.json
+2025-01-02 21:30:30,449 - INFO - [building_management_server.py:52] - Successfully loaded JSON from converted_source.json
+2025-01-02 21:30:30,455 - INFO - [building_management_server.py:47] - Attempting to load JSON file: converted_source.json
+2025-01-02 21:30:30,457 - INFO - [building_management_server.py:52] - Successfully loaded JSON from converted_source.json
+2025-01-02 21:30:30,460 - INFO - [building_management_server.py:47] - Attempting to load JSON file: converted_source.json
+2025-01-02 21:30:30,460 - INFO - [building_management_server.py:52] - Successfully loaded JSON from converted_source.json
+2025-01-02 21:30:45,173 - INFO - [building_management_server.py:47] - Attempting to load JSON file: versions\renovation_data_2025-01-02_15-03-26.json
+2025-01-02 21:30:45,174 - INFO - [building_management_server.py:52] - Successfully loaded JSON from versions\renovation_data_2025-01-02_15-03-26.json
+2025-01-02 21:30:45,174 - INFO - [building_management_server.py:538] - Starting JSON structure validation
+2025-01-02 21:30:45,175 - DEBUG - [building_management_server.py:546] - Found required field: project_name
+2025-01-02 21:30:45,175 - DEBUG - [building_management_server.py:546] - Found required field: last_updated
+2025-01-02 21:30:45,175 - DEBUG - [building_management_server.py:546] - Found required field: status
+2025-01-02 21:30:45,175 - DEBUG - [building_management_server.py:546] - Found required field: rooms
+2025-01-02 21:30:45,176 - DEBUG - [building_management_server.py:554] - Validating room: guest_bathroom
+2025-01-02 21:30:45,176 - DEBUG - [building_management_server.py:554] - Validating room: kitchen
+2025-01-02 21:30:45,176 - DEBUG - [building_management_server.py:554] - Validating room: living_room
+2025-01-02 21:30:45,176 - DEBUG - [building_management_server.py:554] - Validating room: master_bedroom
+2025-01-02 21:30:45,177 - INFO - [building_management_server.py:566] - JSON structure validation completed successfully
+2025-01-02 21:30:45,177 - INFO - [building_management_server.py:73] - Attempting to save JSON file: converted_source.json
+2025-01-02 21:30:45,181 - INFO - [building_management_server.py:87] - Successfully saved JSON to converted_source.json
+2025-01-02 21:30:45,184 - INFO - [building_management_server.py:47] - Attempting to load JSON file: converted_source.json
+2025-01-02 21:30:45,197 - INFO - [building_management_server.py:52] - Successfully loaded JSON from converted_source.json
+2025-01-02 21:30:52,328 - INFO - [building_management_server.py:47] - Attempting to load JSON file: versions\renovation_data_2025-01-02_15-03-26.json
+2025-01-02 21:30:52,329 - INFO - [building_management_server.py:52] - Successfully loaded JSON from versions\renovation_data_2025-01-02_15-03-26.json
+2025-01-02 21:30:52,330 - INFO - [building_management_server.py:538] - Starting JSON structure validation
+2025-01-02 21:30:52,331 - DEBUG - [building_management_server.py:546] - Found required field: project_name
+2025-01-02 21:30:52,331 - DEBUG - [building_management_server.py:546] - Found required field: last_updated
+2025-01-02 21:30:52,332 - DEBUG - [building_management_server.py:546] - Found required field: status
+2025-01-02 21:30:52,333 - DEBUG - [building_management_server.py:546] - Found required field: rooms
+2025-01-02 21:30:52,333 - DEBUG - [building_management_server.py:554] - Validating room: guest_bathroom
+2025-01-02 21:30:52,333 - DEBUG - [building_management_server.py:554] - Validating room: kitchen
+2025-01-02 21:30:52,333 - DEBUG - [building_management_server.py:554] - Validating room: living_room
+2025-01-02 21:30:52,334 - DEBUG - [building_management_server.py:554] - Validating room: master_bedroom
+2025-01-02 21:30:52,334 - INFO - [building_management_server.py:566] - JSON structure validation completed successfully
+2025-01-02 21:30:52,334 - INFO - [building_management_server.py:73] - Attempting to save JSON file: converted_source.json
+2025-01-02 21:30:52,337 - INFO - [building_management_server.py:87] - Successfully saved JSON to converted_source.json
+2025-01-02 21:30:52,340 - INFO - [building_management_server.py:47] - Attempting to load JSON file: converted_source.json
+2025-01-02 21:30:52,354 - INFO - [building_management_server.py:52] - Successfully loaded JSON from converted_source.json
+2025-01-02 21:31:10,063 - INFO - [building_management_server.py:47] - Attempting to load JSON file: versions\renovation_data_2025-01-02_15-03-26.json
+2025-01-02 21:31:10,064 - INFO - [building_management_server.py:52] - Successfully loaded JSON from versions\renovation_data_2025-01-02_15-03-26.json
+2025-01-02 21:31:10,064 - INFO - [building_management_server.py:538] - Starting JSON structure validation
+2025-01-02 21:31:10,064 - DEBUG - [building_management_server.py:546] - Found required field: project_name
+2025-01-02 21:31:10,064 - DEBUG - [building_management_server.py:546] - Found required field: last_updated
+2025-01-02 21:31:10,064 - DEBUG - [building_management_server.py:546] - Found required field: status
+2025-01-02 21:31:10,065 - DEBUG - [building_management_server.py:546] - Found required field: rooms
+2025-01-02 21:31:10,065 - DEBUG - [building_management_server.py:554] - Validating room: guest_bathroom
+2025-01-02 21:31:10,065 - DEBUG - [building_management_server.py:554] - Validating room: kitchen
+2025-01-02 21:31:10,066 - DEBUG - [building_management_server.py:554] - Validating room: living_room
+2025-01-02 21:31:10,066 - DEBUG - [building_management_server.py:554] - Validating room: master_bedroom
+2025-01-02 21:31:10,066 - INFO - [building_management_server.py:566] - JSON structure validation completed successfully
+2025-01-02 21:31:10,066 - INFO - [building_management_server.py:73] - Attempting to save JSON file: converted_source.json
+2025-01-02 21:31:10,068 - INFO - [building_management_server.py:87] - Successfully saved JSON to converted_source.json
+2025-01-02 21:31:10,071 - INFO - [building_management_server.py:47] - Attempting to load JSON file: converted_source.json
+2025-01-02 21:31:10,083 - INFO - [building_management_server.py:52] - Successfully loaded JSON from converted_source.json

@@ -1,0 +1,20 @@
+# Test/backup files
+1main copy 2.py
+11main copy 2.py
+111main copy 2.py
+1111main copy 2.py
+11111main copy 2.py
+111111main copy 2.py
+1111111main copy 2.py
+11111111main copy 2.py
+
+# Log files
+*.log
+
+# Backup files
+*.bak
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class

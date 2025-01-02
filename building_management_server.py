@@ -27,6 +27,21 @@ json_handler = logging.FileHandler('json_operations.log', encoding='utf-8')
 json_handler.setFormatter(logging.Formatter('%(asctime)s - %(levelname)s - [%(filename)s:%(lineno)d] - %(message)s'))
 json_logger.addHandler(json_handler)
 
+def get_latest_version():
+    """Get the latest version file from the versions directory"""
+    versions_dir = 'versions'
+    if not os.path.exists(versions_dir):
+        os.makedirs(versions_dir)
+        logger.info(f"Created versions directory: {versions_dir}")
+        return None
+    
+    version_files = [f for f in os.listdir(versions_dir) if f.endswith('.json')]
+    if not version_files:
+        return None
+    
+    latest_version = sorted(version_files)[-1]
+    return os.path.join(versions_dir, latest_version)
+
 def load_json_file(filepath, backup_recovery=True):
     """Load and parse a JSON file with error handling and backup recovery"""
     json_logger.info(f"Attempting to load JSON file: {filepath}")
@@ -556,140 +571,34 @@ class BuildingManagementHandler(SimpleHTTPRequestHandler):
             return False, f"Validation error: {str(e)}"
 
 def initialize_json_file():
-    """Initialize the JSON file with default data if it doesn't exist"""
-    if not os.path.exists('converted_source.json'):
-        default_data = {
-            "project_name": "123 Main Street Apartment Renovation",
-            "last_updated": datetime.now().isoformat(),
-            "status": "planning",
-            "rooms": {
-                "guest_bathroom": {
-                    "priority": "low",
-                    "budget": {
-                        "amount": 1018.99,
-                        "notes": "Focus on essential updates, keeping existing layout",
-                        "attachments": []
-                    },
-                    "square_footage": {
-                        "value": 40,
-                        "cost": 0,
-                        "notes": "No structural changes planned",
-                        "vendor": "",
-                        "attachments": []
-                    },
-                    "painting": {
-                        "walls": {
-                            "color": "Benjamin Moore Pale Oak OC-20",
-                            "finish": "Eggshell",
-                            "paint_type": "bathroom_specific",
-                            "cost": 145.00,
-                            "notes": "2 gallons needed",
-                            "vendor": "Benjamin Moore Store",
-                            "attachments": []
-                        }
-                    },
-                    "projects": []
-                },
-                "kitchen": {
-                    "priority": "high",
-                    "budget": {
-                        "amount": 4248.00,
-                        "notes": "Priority on appliances and countertops",
-                        "attachments": []
-                    },
-                    "projects": []
-                },
-                "living_room": {
-                    "priority": "low",
-                    "budget": {
-                        "amount": 904.00,
-                        "notes": "Focus on flooring and paint",
-                        "attachments": []
-                    },
-                    "projects": []
-                },
-                "master_bedroom": {
-                    "priority": "low",
-                    "budget": {
-                        "amount": 803.99,
-                        "notes": "New flooring and closet organization",
-                        "attachments": []
-                    },
-                    "painting": {
-                        "walls": {
-                            "color": "Sherwin Williams Agreeable Gray",
-                            "finish": "Eggshell",
-                            "paint_type": "low-VOC",
-                            "cost": 165.00,
-                            "notes": "2 gallons needed for complete coverage",
-                            "vendor": "Sherwin Williams",
-                            "attachments": []
-                        }
-                    },
-                    "projects": []
-                }
-            },
-            "general_considerations": {
-                "building_management": {
-                    "property_manager": {
-                        "name": "",
-                        "phone": "",
-                        "email": "",
-                        "office_hours": "",
-                        "emergency_contact": ""
-                    },
-                    "renovation_rules": {
-                        "working_hours": "",
-                        "elevator_usage": "",
-                        "debris_removal": "",
-                        "noise_restrictions": "",
-                        "insurance_requirements": "",
-                        "attachments": []
-                    }
-                },
-                "contractor_information": {},
-                "timeline": {
-                    "start_date": datetime.now().strftime('%Y-%m-%d'),
-                    "estimated_duration": "",
-                    "phase_breakdown": [],
-                    "notes": "",
-                    "attachments": []
-                },
-                "budget": {
-                    "total": 6974.98,
-                    "room_allocations": {
-                        "guest_bathroom": 1018.99,
-                        "kitchen": 4248.00,
-                        "living_room": 904.00,
-                        "master_bedroom": 803.99
-                    },
-                    "contingency": 0,
-                    "notes": "",
-                    "attachments": []
-                }
-            }
-        }
-        
-        if not save_json_file('converted_source.json', default_data):
-            logger.error("Failed to create initial JSON file")
-            raise Exception("Failed to create initial JSON file")
-        logger.info("Created initial JSON file with default data")
+    """Initialize JSON file by loading the latest version"""
+    latest_version = get_latest_version()
+    if latest_version:
+        try:
+            data = load_json_file(latest_version)
+            if save_json_file('converted_source.json', data):
+                logger.info(f"Initialized from latest version: {latest_version}")
+                return
+        except Exception as e:
+            logger.error(f"Failed to initialize from {latest_version}: {str(e)}")
+    
+    logger.warning("No valid version found in versions directory")
+    logger.info("Please load a valid JSON file through the web interface")
 
 def run_server():
     port = 8000
     server_address = ('', port)
     
-    # Initialize JSON file if it doesn't exist
+    # Initialize JSON file from latest version
     initialize_json_file()
     
-    # Create uploads directory if it doesn't exist
+    # Create required directories
     ensure_directory('uploads')
-    
-    # Create versions directory if it doesn't exist
     ensure_directory('versions')
     
     httpd = HTTPServer(server_address, BuildingManagementHandler)
     print(f"Server running at http://localhost:{port}")
+    print("Please load a JSON file through the web interface if no version was found")
     httpd.serve_forever()
 
 if __name__ == '__main__':
